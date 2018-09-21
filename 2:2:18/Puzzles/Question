@@ -1,0 +1,19 @@
+You are given 128 puzzles (https://en.wikipedia.org/wiki/15_puzzle)
+The ith puzzle determines the ith bit of the flag:
+* 1 if the puzzle is soluble
+* 0 if the puzzle is unsoluble
+Implement is_soluble() below, and use the code to get the flag!
+
+
+Note: There is an important note on the News page about this challenge. 
+
+def is_soluble(i):
+     return 0
+flag = ' '
+for i in range(128):
+     flag = ('1' if is_soluble(i) else '0') + flag
+print('SharifCTF{%016x}' % int(flag, 2))
+
+
+Whether a puzzle is solvable 
+https://www.geeksforgeeks.org/check-instance-15-puzzle-solvable/
